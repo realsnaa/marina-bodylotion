@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Home({ openDetail, setPage }) {
+
   const products = [
     {
       id: 1,
@@ -8,10 +9,10 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Smooth and Glow.png",
       slogan:"Kulit halus bercahaya sepanjang hari 🌸",
       price:"Rp 5.000 - 15.000",
-      detail:"Lotion dengan ekstrak Macadamia & Pure Honey, melembapkan dan membuat kulit halus bercahaya hingga 24 jam. Cocok untuk kulit normal yang butuh kilau sehat alami.",
+      detail:"Lotion dengan ekstrak Macadamia & Pure Honey, melembapkan dan membuat kulit halus bercahaya hingga 24 jam.",
       ingredients:["Pure Honey & Pearlescent Essence","Macadamia"],
       size:["95ml","190ml","335ml","475ml"],
-      usage:"Aplikasikan pada seluruh bagian tubuh secara merata. Gunakan secara teratur minimal 2x sehari."
+      usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
     },
     {
       id: 2,
@@ -19,10 +20,10 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Nourished and Healthy.png",
       slogan:"Menutrisi & menjaga kelembapan kulit 🌿",
       price:"Rp 5.000 - 15.000",
-      detail:"Diperkaya Sweet Almond & Chia Seed yang menutrisi dan menjaga kelembapan kulit seharian. Ideal untuk kulit kusam yang butuh perawatan ekstra agar sehat dan lembut.",
+      detail:"Diperkaya Sweet Almond & Chia Seed yang menutrisi kulit seharian.",
       ingredients:["Sweet Almond","Chia Seed"],
       size:["95ml","190ml","335ml","475ml"],
-      usage:"Aplikasikan pada seluruh bagian tubuh secara merata. Gunakan secara teratur minimal 2x sehari."
+      usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
     },
     {
       id: 3,
@@ -30,10 +31,10 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Protects and Cares.png",
       slogan:"Lindungi kulit dari sinar matahari & polusi ☀️",
       price:"Rp 5.000 - 15.000",
-      detail:"Mengandung Apple, Grapefruit, dan Sunscreen untuk lindungi kulit dari sinar matahari dan polusi, plus kelembapan tahan lama 24 jam. Pilihan tepat untuk aktivitas di luar ruangan.",
+      detail:"Mengandung Apple, Grapefruit dan Sunscreen melindungi dari sinar matahari.",
       ingredients:["Apple","Grapefruit","Sunscreen"],
       size:["95ml","190ml","335ml","475ml"],
-      usage:"Aplikasikan pada seluruh bagian tubuh secara merata. Gunakan secara teratur minimal 2x sehari."
+      usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
     },
     {
       id: 4,
@@ -41,21 +42,21 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Rich Moisturizing.png",
       slogan:"Kelembapan ekstra & kulit halus 🥑",
       price:"Rp 5.000 - 15.000",
-      detail:"Kaya Avocado dan Olive Oil memberikan kelembapan ekstra dan menghaluskan kulit kering dan kasar. Pas untuk kulit yang sering kering akibat aktivitas di dalam dan luar ruangan.",
+      detail:"Kaya Avocado & Olive Oil untuk kulit sangat kering.",
       ingredients:["Avocado","Olive Oil"],
       size:["95ml","190ml","335ml","475ml"],
-      usage:"Aplikasikan pada seluruh bagian tubuh secara merata. Gunakan secara teratur minimal 2x sehari."
+      usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
     },
     {
       id: 5,
       name:"Marina Natural Nutri Serum",
       img:"/assets/images/Nutri Serum.png",
-      slogan:"Menutrisi kulit sekaligus aroma menenangkan 💜",
+      slogan:"Menutrisi kulit & aroma menenangkan 💜",
       price:"Rp 5.000 - 15.000",
-      detail:"Body serum lavender dengan Oat dan Vitamin E, menutrisi kulit sekaligus memberikan aroma menenangkan. Cocok untuk semua jenis kulit yang butuh perlindungan dan kelembapan.",
+      detail:"Serum lavender dengan Oat & Vitamin E untuk semua jenis kulit.",
       ingredients:["Lavender","Oat","Vitamin E"],
       size:["95ml","190ml","335ml","475ml"],
-      usage:"Aplikasikan pada seluruh bagian tubuh secara merata. Gunakan secara teratur minimal 2x sehari."
+      usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
     }
   ];
 
@@ -71,22 +72,13 @@ export default function Home({ openDetail, setPage }) {
   const current = products[index];
 
   return (
-    <div className="home-container">
-
-      {/* HEADER */}
+    <div>
       <div className="header">
         <h1>Marina Natural Body Care</h1>
         <p>Produk alami untuk kulit sehat, lembap, dan bercahaya 🌸</p>
       </div>
 
-      {/* VIDEO PROMO */}
-      <div className="promo-video">
-        <video controls width="100%" style={{ borderRadius: "12px" }}>
-          <source src="/assets/video/promo.mp4" type="video/mp4" />
-        </video>
-      </div>
-
-      {/* SLIDE SHOW */}
+      {/* SLIDER */}
       <div className="slider-container">
         <div className="slide-item">
           <img src={current.img} alt={current.name} />
@@ -95,6 +87,13 @@ export default function Home({ openDetail, setPage }) {
             <p>{current.slogan}</p>
           </div>
         </div>
+      </div>
+
+      {/* VIDEO IKLAN */}
+      <div style={{ textAlign: "center", marginTop: "10px" }}>
+        <video controls width="90%" style={{ maxWidth: "600px", borderRadius: "12px" }}>
+          <source src="/assets/videos/marina.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* GRID PRODUK */}
@@ -114,7 +113,6 @@ export default function Home({ openDetail, setPage }) {
         <a href="mailto:sahabatmarina@gmail.com">Email</a>
         <button className="button" onClick={() => setPage("login")}>Login Admin</button>
       </div>
-
     </div>
   );
 }

@@ -22,22 +22,33 @@ export default function ProductDetail({ product, setPage, addResponse }) {
   const submitFeedback = () => {
     addResponse({ product: product.name, response: "NO", feedback: feedbackText });
     setModalTitle("Terima Kasih atas Masukanmu 🌸");
-    setModalMessage("Feedbackmu sudah diterima. Semoga pengalaman berikutnya lebih menyenangkan! ");
+    setModalMessage("Feedbackmu sudah diterima!");
     setShowFeedback(false);
     setShowModal(true);
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: window.innerWidth < 768 ? "column" : "row", gap: "30px", padding: "20px" }}>
+    <div style={{
+      display: "flex",
+      flexDirection: window.innerWidth < 768 ? "column" : "row",
+      gap: "30px",
+      padding: "20px"
+    }}>
+      
       <img src={product.img} alt={product.name} style={{ width: "300px", borderRadius: "12px" }} />
+      
       <div style={{ maxWidth: "600px" }}>
         <h2>{product.name}</h2>
-        <p>{product.detail}</p>
-        <p><b>Kandungan :</b> {product.ingredients.join(", ")}</p>
-        <p><b>Ukuran :</b> {product.size.join(", ")}</p>
-        <p><b>Cara Pakai :</b> {product.usage}</p>
-        <p><b>Harga :</b> {product.price}</p>
 
+        <p>{product.detail}</p>
+
+        <p><b>Kandungan:</b> {product.ingredients.join(", ")}</p>
+        
+        <p><b>Ukuran:</b> {product.size.join(", ")}</p>
+
+        <p><b>Cara Pakai:</b> {product.usage}</p>
+
+        <p><b>Harga:</b> {product.price}</p>
 
         <div style={{ display: "flex", gap: "10px", marginTop: "15px" }}>
           <button className="button" onClick={handleYes}>YES</button>
@@ -46,7 +57,7 @@ export default function ProductDetail({ product, setPage, addResponse }) {
         </div>
       </div>
 
-      {/* Modal YES */}
+      {/* Modal */}
       {showModal && (
         <div className="modal" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -57,7 +68,7 @@ export default function ProductDetail({ product, setPage, addResponse }) {
         </div>
       )}
 
-      {/* Modal Feedback NO */}
+      {/* Feedback */}
       {showFeedback && (
         <div className="modal" onClick={() => setShowFeedback(false)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -75,6 +86,7 @@ export default function ProductDetail({ product, setPage, addResponse }) {
           </div>
         </div>
       )}
+
     </div>
   );
 }
