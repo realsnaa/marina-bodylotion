@@ -32,11 +32,12 @@ export default function ProductDetail({ product, setPage, addResponse }) {
       <img src={product.img} alt={product.name} style={{ width: "300px", borderRadius: "12px" }} />
       <div style={{ maxWidth: "600px" }}>
         <h2>{product.name}</h2>
-        <p><b>Harga:</b> {product.price}</p>
         <p>{product.detail}</p>
-        <p><b>Kandungan:</b> {product.ingredients?.join(", ")}</p>
-        <p><b>Ukuran:</b> {product.size?.join(", ")}</p>
-        <p><b>Cara Pakai:</b> {product.usage}</p>
+        <p><b>Kandungan :</b> {product.ingredients.join(", ")}</p>
+        <p><b>Ukuran :</b> {product.size.join(", ")}</p>
+        <p><b>Cara Pakai :</b> {product.usage}</p>
+        <p><b>Harga :</b> {product.price}</p>
+
 
         <div style={{ display: "flex", gap: "10px", marginTop: "15px" }}>
           <button className="button" onClick={handleYes}>YES</button>

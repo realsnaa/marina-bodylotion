@@ -18,7 +18,7 @@ export default function Home({ openDetail, setPage }) {
       name:"Marina Natural Nourished and Healthy",
       img:"/assets/images/Nourished and Healthy.png",
       slogan:"Menutrisi & menjaga kelembapan kulit 🌿",
-      price:"Rp Rp 5.000 - 15.000",
+      price:"Rp 5.000 - 15.000",
       detail:"Diperkaya Sweet Almond & Chia Seed yang menutrisi dan menjaga kelembapan kulit seharian. Ideal untuk kulit kusam yang butuh perawatan ekstra agar sehat dan lembut.",
       ingredients:["Sweet Almond","Chia Seed"],
       size:["95ml","190ml","335ml","475ml"],
@@ -29,7 +29,7 @@ export default function Home({ openDetail, setPage }) {
       name:"Marina Natural Protects and Cares",
       img:"/assets/images/Protects and Cares.png",
       slogan:"Lindungi kulit dari sinar matahari & polusi ☀️",
-      price:"Rp Rp 5.000 - 15.000",
+      price:"Rp 5.000 - 15.000",
       detail:"Mengandung Apple, Grapefruit, dan Sunscreen untuk lindungi kulit dari sinar matahari dan polusi, plus kelembapan tahan lama 24 jam. Pilihan tepat untuk aktivitas di luar ruangan.",
       ingredients:["Apple","Grapefruit","Sunscreen"],
       size:["95ml","190ml","335ml","475ml"],
@@ -40,7 +40,7 @@ export default function Home({ openDetail, setPage }) {
       name:"Marina Natural Rich Moisturizing",
       img:"/assets/images/Rich Moisturizing.png",
       slogan:"Kelembapan ekstra & kulit halus 🥑",
-      price:"Rp Rp 5.000 - 15.000",
+      price:"Rp 5.000 - 15.000",
       detail:"Kaya Avocado dan Olive Oil memberikan kelembapan ekstra dan menghaluskan kulit kering dan kasar. Pas untuk kulit yang sering kering akibat aktivitas di dalam dan luar ruangan.",
       ingredients:["Avocado","Olive Oil"],
       size:["95ml","190ml","335ml","475ml"],
@@ -51,7 +51,7 @@ export default function Home({ openDetail, setPage }) {
       name:"Marina Natural Nutri Serum",
       img:"/assets/images/Nutri Serum.png",
       slogan:"Menutrisi kulit sekaligus aroma menenangkan 💜",
-      price:"Rp Rp 5.000 - 15.000",
+      price:"Rp 5.000 - 15.000",
       detail:"Body serum lavender dengan Oat dan Vitamin E, menutrisi kulit sekaligus memberikan aroma menenangkan. Cocok untuk semua jenis kulit yang butuh perlindungan dan kelembapan.",
       ingredients:["Lavender","Oat","Vitamin E"],
       size:["95ml","190ml","335ml","475ml"],
@@ -66,15 +66,24 @@ export default function Home({ openDetail, setPage }) {
       setIndex(prev => (prev + 1) % products.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [products.length]);
+  }, []);
 
   const current = products[index];
 
   return (
-    <div>
+    <div className="home-container">
+
+      {/* HEADER */}
       <div className="header">
         <h1>Marina Natural Body Care</h1>
         <p>Produk alami untuk kulit sehat, lembap, dan bercahaya 🌸</p>
+      </div>
+
+      {/* VIDEO PROMO */}
+      <div className="promo-video">
+        <video controls width="100%" style={{ borderRadius: "12px" }}>
+          <source src="/assets/video/promo.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* SLIDE SHOW */}
@@ -105,6 +114,7 @@ export default function Home({ openDetail, setPage }) {
         <a href="mailto:sahabatmarina@gmail.com">Email</a>
         <button className="button" onClick={() => setPage("login")}>Login Admin</button>
       </div>
+
     </div>
   );
 }
