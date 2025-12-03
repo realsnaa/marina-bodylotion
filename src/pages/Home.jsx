@@ -20,7 +20,7 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Nourished and Healthy.png",
       slogan:"Menutrisi & menjaga kelembapan kulit 🌿",
       price:"Rp 5.000 - 15.000",
-      detail:"Diperkaya Sweet Almond & Chia Seed yang menutrisi kulit seharian.",
+      detail:"Diperkaya Sweet Almond & Chia Seed yang menutrisi dan menjaga kelembapan kulit seharian. Ideal untuk kulit kusam yang butuh perawatan ekstra agar sehat dan lembut.",
       ingredients:["Sweet Almond","Chia Seed"],
       size:["95ml","190ml","335ml","475ml"],
       usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
@@ -31,7 +31,7 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Protects and Cares.png",
       slogan:"Lindungi kulit dari sinar matahari & polusi ☀️",
       price:"Rp 5.000 - 15.000",
-      detail:"Mengandung Apple, Grapefruit dan Sunscreen melindungi dari sinar matahari.",
+      detail:"Mengandung Apple, Grapefruit, dan Sunscreen untuk lindungi kulit dari sinar matahari dan polusi, plus kelembapan tahan lama 24 jam. Pilihan tepat untuk aktivitas di luar ruangan.",
       ingredients:["Apple","Grapefruit","Sunscreen"],
       size:["95ml","190ml","335ml","475ml"],
       usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
@@ -42,7 +42,7 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Rich Moisturizing.png",
       slogan:"Kelembapan ekstra & kulit halus 🥑",
       price:"Rp 5.000 - 15.000",
-      detail:"Kaya Avocado & Olive Oil untuk kulit sangat kering.",
+      detail:"Kaya Avocado dan Olive Oil memberikan kelembapan ekstra dan menghaluskan kulit kering dan kasar. Pas untuk kulit yang sering kering akibat aktivitas di dalam dan luar ruangan.",
       ingredients:["Avocado","Olive Oil"],
       size:["95ml","190ml","335ml","475ml"],
       usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."
@@ -53,7 +53,7 @@ export default function Home({ openDetail, setPage }) {
       img:"/assets/images/Nutri Serum.png",
       slogan:"Menutrisi kulit & aroma menenangkan 💜",
       price:"Rp 5.000 - 15.000",
-      detail:"Serum lavender dengan Oat & Vitamin E untuk semua jenis kulit.",
+      detail:"Body serum lavender dengan Oat dan Vitamin E, menutrisi kulit sekaligus memberikan aroma menenangkan. Cocok untuk semua jenis kulit yang butuh perlindungan dan kelembapan.",
       ingredients:["Lavender","Oat","Vitamin E"],
       size:["95ml","190ml","335ml","475ml"],
       usage:"Aplikasikan pada seluruh bagian tubuh secara merata minimal 2x sehari."

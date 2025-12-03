@@ -9,7 +9,7 @@ export default function ProductDetail({ product, setPage, addResponse }) {
 
   const handleYes = () => {
     setModalTitle("Terima Kasih! ");
-    setModalMessage(`Senang kamu memilih ${product.name}. Semoga kulitmu makin sehat dan bercahaya! ✨`);
+    setModalMessage(`Senang kamu memilih ${product.name}. Semoga kulitmu semakin sehat dan bercahaya! ✨`);
     addResponse({ product: product.name, response: "YES" });
     setShowModal(true);
   };
@@ -39,15 +39,10 @@ export default function ProductDetail({ product, setPage, addResponse }) {
       
       <div style={{ maxWidth: "600px" }}>
         <h2>{product.name}</h2>
-
         <p>{product.detail}</p>
-
         <p><b>Kandungan:</b> {product.ingredients.join(", ")}</p>
-        
         <p><b>Ukuran:</b> {product.size.join(", ")}</p>
-
         <p><b>Cara Pakai:</b> {product.usage}</p>
-
         <p><b>Harga:</b> {product.price}</p>
 
         <div style={{ display: "flex", gap: "10px", marginTop: "15px" }}>
