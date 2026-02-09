@@ -90,9 +90,9 @@ export default function Home({ openDetail, setPage }) {
       </div>
 
       {/* VIDEO IKLAN */}
-      <div style={{ textAlign: "center", marginTop: "10px" }}>
-        <video controls width="90%" style={{ maxWidth: "600px", borderRadius: "12px" }}>
-          <source src="/assets/videos/marina.mp4" type="video/mp4" />
+      <div className="video-wrapper">
+        <video controls playsInline preload="metadata">
+          <source src="/assets/images/VideoPromosi.mp4" type="video/mp4" />
         </video>
       </div>
 
