@@ -94,11 +94,12 @@ export default function Home({ openDetail, setPage }) {
         <h3 style={{ color: "#9c27b0", marginBottom: "12px" }}>
           Video Produk Marina 💖
           </h3>
-          
+
       <div className="video-wrapper">
         <video controls playsInline preload="metadata">
           <source src="/assets/images/VideoPromosi.mp4" type="video/mp4" />
         </video>
+        </div>
       </div>
 
       {/* GRID PRODUK */}
