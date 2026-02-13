@@ -116,7 +116,7 @@ export default function Home({ openDetail, setPage }) {
       {/* CONTACT */}
       <div className="contact">
         <a href="https://wa.me/6281234567890" target="_blank">Contact</a>
-        <a href="mailto:sahabatmarina@gmail.com">Email</a>
+        <a href="mailto:myproject@gmail.com">Email</a>
         <button className="button" onClick={() => setPage("login")}>Login Admin</button>
       </div>
     </div>
